@@ -41,6 +41,7 @@ export default function ChatInterface({
     return (
       <div className="chat-interface">
         <div className="empty-state">
+          <div className="hero-pill">LLM Council</div>
           <h2>Welcome to LLM Council</h2>
           <p>Create a new conversation to get started</p>
         </div>
@@ -50,6 +51,14 @@ export default function ChatInterface({
 
   return (
     <div className="chat-interface">
+      <div className="chat-hero">
+        <div className="hero-pill">Council Playground</div>
+        <h2>Black &amp; Royal Blue Chamber</h2>
+        <p>
+          Ask once. Hear every voice. Let the council&apos;s personalities debate and synthesize.
+        </p>
+      </div>
+
       <div className="messages-container">
         {conversation.messages.length === 0 ? (
           <div className="empty-state">

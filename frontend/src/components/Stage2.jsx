@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import ReactMarkdown from 'react-markdown';
+import { getPersona } from './personaUtils';
 import './Stage2.css';
 
 function deAnonymizeText(text, labelToModel) {
@@ -38,7 +39,10 @@ export default function Stage2({ rankings, labelToModel, aggregateRankings }) {
             className={`tab ${activeTab === index ? 'active' : ''}`}
             onClick={() => setActiveTab(index)}
           >
-            {rank.model.split('/')[1] || rank.model}
+            <span className="tab-model">
+              {rank.model.split('/')[1] || rank.model}
+            </span>
+            <span className="tab-persona">{getPersona(rank.model).title}</span>
           </button>
         ))}
       </div>
@@ -46,6 +50,15 @@ export default function Stage2({ rankings, labelToModel, aggregateRankings }) {
       <div className="tab-content">
         <div className="ranking-model">
           {rankings[activeTab].model}
+          {(() => {
+            const persona = getPersona(rankings[activeTab].model);
+            return (
+              <span className={`persona-pill ${persona.accent}`}>
+                <span className="persona-name">{persona.shortName}</span>
+                <span className="persona-title">{persona.title}</span>
+              </span>
+            );
+          })()}
         </div>
         <div className="ranking-content markdown-content">
           <ReactMarkdown>

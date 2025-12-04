@@ -1,12 +1,16 @@
 .stage2 {
-  background: #fafafa;
+  background: linear-gradient(135deg, rgba(14, 22, 46, 0.9), rgba(8, 14, 30, 0.8));
+  border-radius: 14px;
+  border: 1px solid rgba(95, 143, 255, 0.35);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .stage2 h4 {
   margin: 20px 0 8px 0;
-  color: #333;
+  color: #e7ecff;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: 0.02em;
 }
 
 .stage2 h4:first-of-type {
@@ -15,22 +19,23 @@
 
 .stage-description {
   margin: 0 0 12px 0;
-  color: #666;
+  color: #b5c7ff;
   font-size: 13px;
   line-height: 1.5;
 }
 
 .aggregate-rankings {
-  background: #f0f7ff;
+  background: rgba(21, 40, 86, 0.65);
   padding: 16px;
-  border-radius: 8px;
+  border-radius: 12px;
   margin-bottom: 20px;
-  border: 2px solid #d0e7ff;
+  border: 1px solid rgba(92, 149, 255, 0.35);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
 .aggregate-rankings h4 {
   margin: 0 0 12px 0;
-  color: #2a7ae2;
+  color: #8cb6ff;
   font-size: 15px;
 }
 
@@ -45,13 +50,13 @@
   align-items: center;
   gap: 12px;
   padding: 10px;
-  background: #ffffff;
-  border-radius: 6px;
-  border: 1px solid #d0e7ff;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 10px;
+  border: 1px solid rgba(93, 150, 255, 0.35);
 }
 
 .rank-position {
-  color: #2a7ae2;
+  color: #5ca0ff;
   font-weight: 700;
   font-size: 16px;
   min-width: 35px;
@@ -59,14 +64,14 @@
 
 .rank-model {
   flex: 1;
-  color: #333;
+  color: #f6f8ff;
   font-family: monospace;
   font-size: 14px;
   font-weight: 500;
 }
 
 .rank-score {
-  color: #666;
+  color: #b5c7ff;
   font-size: 13px;
   font-family: monospace;
 }
@@ -80,46 +85,62 @@
 
 .stage2 .tab {
   padding: 8px 16px;
-  background: #ffffff;
-  border: 1px solid #d0d0d0;
-  border-radius: 6px 6px 0 0;
-  color: #666;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(87, 140, 255, 0.35);
+  border-radius: 10px;
+  color: #c8d6ff;
   cursor: pointer;
   font-size: 14px;
   transition: all 0.2s;
 }
 
 .stage2 .tab:hover {
-  background: #f0f0f0;
-  color: #333;
-  border-color: #4a90e2;
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  border-color: #5ea2ff;
 }
 
 .stage2 .tab.active {
-  background: #ffffff;
-  color: #4a90e2;
-  border-color: #4a90e2;
-  border-bottom-color: #ffffff;
-  font-weight: 600;
+  background: linear-gradient(135deg, rgba(33, 75, 146, 0.7), rgba(21, 40, 86, 0.85));
+  color: #f6f8ff;
+  border-color: #5ea2ff;
+  font-weight: 700;
+  box-shadow: 0 10px 25px rgba(15, 123, 255, 0.2);
+}
+
+.tab-model {
+  font-weight: 700;
+  color: #f6f8ff;
+}
+
+.tab-persona {
+  font-size: 11px;
+  color: #9fb7ff;
+  letter-spacing: 0.02em;
+  display: block;
 }
 
 .stage2 .tab-content {
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.02);
   padding: 16px;
-  border-radius: 6px;
-  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  border: 1px solid rgba(82, 130, 255, 0.2);
   margin-bottom: 20px;
 }
 
 .ranking-model {
-  color: #888;
+  color: #9fb7ff;
   font-size: 12px;
   font-family: monospace;
   margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .ranking-content {
-  color: #333;
+  color: #e7ecff;
   line-height: 1.6;
   font-size: 14px;
 }
@@ -131,14 +152,14 @@
 }
 
 .parsed-ranking strong {
-  color: #2a7ae2;
+  color: #8cb6ff;
   font-size: 13px;
 }
 
 .parsed-ranking ol {
   margin: 8px 0 0 0;
   padding-left: 24px;
-  color: #333;
+  color: #e7ecff;
 }
 
 .parsed-ranking li {
@@ -148,6 +169,45 @@
 }
 
 .rank-count {
-  color: #999;
+  color: #b5c7ff;
   font-size: 12px;
+}
+
+.persona-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(99, 154, 255, 0.35);
+  font-family: 'Inter', 'SF Pro Display', 'Segoe UI', system-ui, sans-serif;
+}
+
+.persona-pill .persona-name {
+  color: #f6f8ff;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.persona-pill .persona-title {
+  color: #9fb7ff;
+  font-size: 11px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.persona-pill.accent-0 {
+  border-color: rgba(15, 123, 255, 0.5);
+  box-shadow: 0 0 0 1px rgba(15, 123, 255, 0.2);
+}
+
+.persona-pill.accent-1 {
+  border-color: rgba(112, 94, 255, 0.5);
+  box-shadow: 0 0 0 1px rgba(112, 94, 255, 0.2);
+}
+
+.persona-pill.accent-2 {
+  border-color: rgba(51, 211, 255, 0.5);
+  box-shadow: 0 0 0 1px rgba(51, 211, 255, 0.2);
 }

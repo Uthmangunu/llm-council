@@ -1,25 +1,73 @@
 .stage3 {
-  background: #f0fff0;
-  border-color: #c8e6c8;
+  background: linear-gradient(135deg, rgba(11, 26, 52, 0.95), rgba(4, 12, 26, 0.9));
+  border-color: rgba(95, 143, 255, 0.35);
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .final-response {
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.02);
   padding: 20px;
-  border-radius: 6px;
-  border: 1px solid #c8e6c8;
+  border-radius: 12px;
+  border: 1px solid rgba(82, 130, 255, 0.2);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
 .chairman-label {
-  color: #2d8a2d;
+  color: #8cb6ff;
   font-size: 12px;
   font-family: monospace;
   margin-bottom: 12px;
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .final-text {
-  color: #333;
+  color: #e7ecff;
   line-height: 1.7;
   font-size: 15px;
+}
+
+.persona-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(99, 154, 255, 0.35);
+  font-family: 'Inter', 'SF Pro Display', 'Segoe UI', system-ui, sans-serif;
+}
+
+.persona-pill .persona-name {
+  color: #f6f8ff;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.persona-pill .persona-title {
+  color: #9fb7ff;
+  font-size: 11px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.persona-pill.accent-0 {
+  border-color: rgba(15, 123, 255, 0.5);
+  box-shadow: 0 0 0 1px rgba(15, 123, 255, 0.2);
+}
+
+.persona-pill.accent-1 {
+  border-color: rgba(112, 94, 255, 0.5);
+  box-shadow: 0 0 0 1px rgba(112, 94, 255, 0.2);
+}
+
+.persona-pill.accent-2 {
+  border-color: rgba(51, 211, 255, 0.5);
+  box-shadow: 0 0 0 1px rgba(51, 211, 255, 0.2);
 }
